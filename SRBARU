@@ -397,10 +397,10 @@ IncreaseRadius.MouseButton1Click:Connect(function()
 end)
 
 -- Get player thumbnail
-local userId = Players:GetUserIdFromNameAsync("Robloxlukasgames")
+
 local thumbType = Enum.ThumbnailType.HeadShot
 local thumbSize = Enum.ThumbnailSize.Size420x420
-local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+local content, isReady = Players:GetUserThumbnailAsync(3437789978, thumbType, thumbSize)
 
 StarterGui:SetCore("SendNotification", {
     Title = "super ring parts by TRLT2",
