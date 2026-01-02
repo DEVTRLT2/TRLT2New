@@ -1,0 +1,27 @@
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "RESETGUI"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = game.CoreGui
+
+local f = Instance.new("Frame", ScreenGui)
+f.Size = UDim2.new(0.1, 0, 0.05, 0)
+f.Position = UDim2.new(0, 0, 0, 0)-- Dark brown
+f.BackgroundColor3 = Color3.fromRGB(45, 45, 45) -- Lighter brown
+
+local b = Instance.new("TextButton")
+b.Size = UDim2.new(1, 0, .7,0)
+b.Position = UDim2.new(0, 0, 0.3,0)
+b.Text = "Reset Humnaoid"
+b.TextColor3 = Color3.fromRGB(255,255,255) -- Dark brown
+b.BackgroundColor3 = Color3.fromRGB(35, 35, 35) -- Lighter brown
+b.Font = Enum.Font.Fondamento -- More elegant font
+--b.TextSize = 22
+b.TextScaled = true
+b.Parent = f
+
+b.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+f.Active = true
+f.Draggable = true
