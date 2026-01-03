@@ -3,6 +3,7 @@ local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
 local Workspace = game:GetService("Workspace")
+local StarterGui = game:GetService("StarterGui")
 
 local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -177,3 +178,14 @@ local function createControlButton()
 end
 
 createControlButton()
+
+local thumbType = Enum.ThumbnailType.HeadShot
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local content, isReady = Players:GetUserThumbnailAsync(3437789978, thumbType, thumbSize)
+
+StarterGui:SetCore("SendNotification", {
+	Title = "TRLT2 black hole aktif!",
+	Text = "enjoy",
+	Icon = content,
+	Duration = 5
+})
